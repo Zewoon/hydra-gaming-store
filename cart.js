@@ -35,3 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCartCount();
 });
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function addToCart(diamonds, price) {
+    cart.push({ diamonds, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+}
+
+function updateCartCount() {
+    const countElements = document.querySelectorAll('#cart-count');
+    countElements.forEach(el => el.textContent = cart.length);
+}
+
+// Rest of your existing cart.js code remains the same
