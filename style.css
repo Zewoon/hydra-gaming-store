@@ -1,1 +1,12 @@
-nsj
+/* Add this to your existing CSS */
+.product h3 {
+    color: #00ff9d; /* Gaming-style green */
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.price {
+    color: #ffd700; /* Gold color for prices */
+    font-size: 1.4em;
+    font-weight: bold;
+}
